@@ -1,0 +1,35 @@
+.nav-indic {
+    background-color: $bg-color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $bg-color-left , #70B3FF);
+    width: 100%;
+    display: flex;
+    padding: 3rem 0;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.nav-indic {
+    h2, p, i {
+        color: $btn-color;
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    h2 {
+        font-weight: $h-priority-all;
+    }
+
+
+
+}
+
+

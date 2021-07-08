@@ -1,0 +1,17 @@
+section.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.gmap {
+  width: 100%;
+  height: 550px;
+  border: 0; }
+
+.container-info {
+  display: flex;
+  align-items: center; }
+  .container-info i {
+    color: #9187FF;
+    font-size: 1.9rem;
+    padding: 1rem; }

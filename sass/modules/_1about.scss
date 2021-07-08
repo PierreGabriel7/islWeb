@@ -1,0 +1,107 @@
+.about-header {
+    width: 100%;
+}
+
+
+
+.progress-bar-title {
+    color: $h-priority-4-color;
+    font-weight: $h-priority-1-weight;
+}
+
+
+.progress-bar {
+    border-radius: 5px;
+    background-color: #DEDEDE;
+    box-shadow: 0px 0px 0px 4px #EEEEEF;    
+    height: 10px;
+    margin: 1rem;
+    position: relative;
+}
+
+.blue-progress-bar {
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    height: 10px;
+    background-color: $color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $color-left , #70B3FF);
+   
+}
+
+
+
+.w85 {
+    width: 85%;
+}
+
+.w95 {
+    width: 95%;
+}
+.w90 {
+    width: 90%;
+}
+.w70 {
+    width: 70%;
+}
+
+
+.client-feedback {
+    padding-bottom: 4rem;
+    background-color: $background-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.progress-bar-container {
+    margin-bottom: 10rem;
+    p {
+        height: 20px;
+        text-align: end;
+    }
+}
+
+.article-pres h5 {
+    text-align: center;
+}
+
+
+
+
+.container-client-feedback {
+    display: flex;
+    margin: 1rem 0;
+    background-color:$background-contrast;
+    width: calc(100% - 2rem);
+    padding: 2rem;
+    img {
+        max-width: 3rem;
+        width: 100%;
+        max-height: 3rem;
+        margin: 1.5rem 1rem;
+    }
+    h3 {
+        color: $h-priority-4-color;
+        font-weight: $h-priority-1-weight;
+    }
+
+}
+
+.client-feedback-p, .client-feedback-h {
+    margin: 0 1rem ;
+}
+
+.m-hide {
+    display: none;
+}
+
+@media screen and (min-width:760px) {
+
+    .m-hide {
+        display: block;
+    }
+}
+

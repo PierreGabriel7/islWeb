@@ -1,0 +1,350 @@
+// Header presentation
+.header-presentation a  {
+    margin: 1rem;
+}
+
+a.header-discorver-btn{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: $btn-cap;
+    font-weight: $btn-weight;
+    color: $btn-color;
+    background-color: $color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $color-left , #70B3FF);
+    padding: 1rem;
+    text-align: center;
+    width: 15rem;
+
+}
+
+.header-section.top {
+    width: 100%;
+    background-color: $background-color;
+}
+
+.warp-header-section{
+    display: flex;
+    justify-content: center;
+    img {
+        display: inline-block;
+        padding: 5rem;
+    }
+    .pic-2 {
+        padding: 0rem;
+    }
+
+} 
+
+// My services
+.article-pres {
+    margin: 6rem 0;
+    h2, p {text-align: center;}
+}
+
+
+.warp.services {
+    display: flex;
+    flex-direction: column;
+    p, h1, h2, h3, h4, i{
+        margin: 1rem;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+
+
+
+.article-pres, .services, .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.services i {
+    font-size: 1.5rem;
+}
+
+// Banner stats
+.banner-stats {
+    padding: 8rem 0;
+    background-color: $bg-color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $bg-color-left , #70B3FF);
+    margin-top: 6rem;
+    width: 100%;
+}
+
+container-banner-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-down h5 {
+    font-weight: $h-priority-1-weight;
+}
+
+.section-down {
+    margin-top: 3rem;
+}
+
+.stats {
+    min-width: 10rem;
+    p, h3 {
+        text-align: center;
+        color: $btn-color;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+}
+
+// Portefollio
+.portfolio{
+    h3 {color: $h-priority-4-color;} 
+    
+}
+
+section.warp.media-q-s {
+    margin-bottom: 12rem;
+}
+
+.overlay-container {
+    position: relative;
+}
+
+.overlay-portefolio {
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: $bg-color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $bg-color-left , #70B3FF);
+    transition: .5s ease;
+}
+
+.portfolio-container {
+    margin: 1rem;
+}
+
+
+.portfolio:hover .overlay-portefolio {
+     opacity: 0.75; 
+}
+
+
+.overlay-portefolio {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        color: #FFF;
+        font-size: 2.8rem;
+    }
+}
+   
+
+
+// User comments
+.blog-article, .container-blog-article  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-blog-article > img{
+    width: 100%;
+    padding: 1rem;
+}
+
+.container-user-coms, .comments-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.comments-row {
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.blog-user {
+    width: 3rem;
+    height: max-content;
+}
+
+.com-count {
+    i {margin: .5rem;}
+}
+
+h3.user-name-comments {
+    color: $h-priority-4-color;
+    align-self: flex-start;
+}
+
+.container-user-coms h3 {
+    font-weight: 300;
+}
+
+.user-coms-section {
+    padding-bottom: 8rem;
+    width: 100%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+}
+
+// Footer up
+
+.footer-bg-up {
+    background-color: $color-left; // For browser without gradient support
+    background-image: linear-gradient(to right, $color-left , #70B3FF);
+}
+
+.footer-sponsors img {
+    display: none;
+    opacity: 60%;
+}
+
+.footer-sponsors img.footer-main-sponsor {
+    display: inline-block;
+}
+
+img.footer-main-sponsor {
+    max-width: 10rem;
+    padding: 6rem 0;
+    
+}
+
+.footer-sponsors {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-a i {
+    color: #FFF;
+}
+
+
+// Media querries
+
+
+// Media querry tablet
+@media screen and (min-width:760px) {
+
+    .warp {
+        max-width: 1140px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-section.section-down {
+        margin-bottom: 1rem;
+    }
+    
+    .header-section.top {
+        display: flex;
+        justify-content: center;
+    }   
+
+    .my-service-p {
+        text-align: center;
+        width: 44rem;
+    }
+
+    .header-presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner-stats {
+        div.row {
+            flex-direction: row;
+        }
+    }
+    .banner-stats {
+        display: flex;
+        justify-content: center;
+    }
+
+    div.stats {
+        min-width: 12rem;
+    }
+
+    div.portfolio {
+        width: 33%;
+    }
+
+    section.warp.services {
+        margin-bottom: 2rem;
+    }
+
+    .container-user-coms {
+        img {
+            width: 2rem;
+        }
+        h3 {
+            margin: 0 0 0 .5rem;
+            font-size: .8rem;
+        }
+    }
+
+    .container-user-coms {
+        align-items: center;
+    }
+
+    footer {
+        width: 100%;
+
+    }
+
+    .footer-bg-up, .footer-bg-down {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-sponsors {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-sponsors img {
+        display: block;
+        height: auto;
+        max-width: 8rem;
+        padding: 5rem 0;
+    }
+
+    .footer-bg-up div.warp {
+        width: 960px;
+    }
+
+    .header-discorver-btn:hover {
+        -webkit-transform:scale(1.05);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 50ms ease-in;
+    }
+
+
+
+}
+
+

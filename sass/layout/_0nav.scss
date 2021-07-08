@@ -1,0 +1,180 @@
+.header-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: auto;
+    width: auto;
+}
+
+.header-nav {
+    width: 100%;
+    background-color: $background-contrast;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isl-heaber-logo {
+    width: 10rem;
+    height: 100%;
+    margin: 2rem;
+}
+
+
+
+
+// Nav menu
+.ul-header-menu li {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.ul-header-menu a {
+    margin: 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    z-index: 2;
+    color:white;
+    text-transform: uppercase;
+
+}
+
+.ul-header-menu a.is-active {
+    color: $links-color;
+}
+
+.hamburger {
+    margin: 1rem;
+    position: fixed;
+    top: 1rem;
+    z-index: 5;
+}
+
+.l-main-nav {
+    width: 50vw;
+    background-color: black;
+    opacity: 80%;
+    overflow: hidden;
+    position: fixed;
+    padding-top: 5rem;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    left: 0;
+}
+
+
+
+.nav-overlay {
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    opacity: 70%;
+    z-index: 1;
+    bottom: 0;
+}
+
+.hamburger + .nav-overlay, .hamburger + .nav-overlay +.l-main-nav{
+    display: none;
+}
+
+.hamburger.is-active {
+    position: fixed;
+}
+.hamburger.is-active + .nav-overlay, .hamburger.is-active + .nav-overlay +.l-main-nav{
+    display: block;
+}
+
+
+
+// Media querry tablet
+@media screen and (min-width:760px) {
+
+    nav.l-main-nav {
+        margin: 0;
+        padding: 0;
+        display: block;
+        background-color: inherit;
+        position: relative;
+        width: auto;
+        height: auto;
+        a {
+            color: #000;
+        }
+    }
+
+    .isl-heaber-logo {
+        margin: 1rem;
+    }
+
+    .container-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ul-header-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        li{
+            margin: 0;
+        }
+        a {
+            margin: 0;
+            padding: 1rem;
+            font-size: 1rem;
+            font-size: 1.1rem;
+        }
+    }
+
+  
+    .header-nav-container {
+        flex-wrap: wrap;
+    }
+
+
+
+    a.menu.is-active {
+        color: $links-color;
+    }
+
+    .ul-header-menu li a{
+        border-bottom: 2px solid transparent;
+    }
+
+    .ul-header-menu li a:after {
+        display:block;
+        content: '';
+        border-bottom: solid 3px $links-color;  
+        transform: scaleX(0);  
+        transition: transform 100ms ease-in-out;
+
+    }
+
+    .ul-header-menu li a:hover:after { 
+        transform: scaleX(1); 
+    }
+
+    .hamburger + .nav-overlay +.l-main-nav{
+        display: block;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+
+}
